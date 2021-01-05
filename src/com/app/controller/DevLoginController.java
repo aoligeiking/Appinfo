@@ -52,7 +52,7 @@ public class DevLoginController {
                 request.setAttribute("error","用户名或密码错误");
             }
         }else{
-            request.setAttribute("error","用户名和密码不能为空o");
+            request.setAttribute("error","用户名和密码不能为空oaa");
         }
         return "devlogin";
     }
