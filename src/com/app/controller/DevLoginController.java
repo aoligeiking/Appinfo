@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.annotation.Resource;
 import javax.naming.NoPermissionException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping(value = "/dev")
@@ -21,12 +20,6 @@ public class DevLoginController {
 
     @Resource
     private DevService devService;
-
-    @RequestMapping("/logout")
-    public String logOut(HttpSession session){
-        session.removeAttribute("devUserSession");
-        return "devlogin";
-    }
 
     @RequestMapping("/main")
     public String main(HttpServletRequest request)throws NoPermissionException{
